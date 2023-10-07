@@ -1,0 +1,10 @@
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.row > div {
+    background-color: aqua;
+    height: 50px;
+    border: solid 1px darkblue;
+}

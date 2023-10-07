@@ -1,0 +1,12 @@
+version: '2'
+services:
+  nodejs:
+    image: node:18
+    volumes:
+      - .:/WEB
+    ports:
+      - "8080:8080"
+      - "3000:3000"
+    stdin_open: true 
+    tty: true
+    command: ["python3", "-m", "http.server", "-d", "/WEB", "3000"]

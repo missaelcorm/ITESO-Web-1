@@ -1,0 +1,50 @@
+body {
+    overflow: hidden;
+}
+
+.row > div {
+    height: 100px;
+    border: 0;
+    max-width: 80px;
+    margin: 5px;
+    padding: 0;
+}
+
+.row > .not-flipped {
+    /* background-color: aqua; */
+    /* background-image: url(img/cover2.jpg); */
+    background-size: cover;
+    transform: rotateY(0deg);
+    color: transparent;
+}
+
+.row > div.flipped {
+    /* background-color: aqua; */
+    transform: rotateY(-180deg);
+    font-size: 60px;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.container {
+    max-width: calc(90px*4);
+    margin: auto;
+}
+
+.row > div.not-flipped > img {
+    visibility: hidden;
+}
+
+.row > div.flipped > img {
+    transform: scaleX(-1);
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-found {
+    pointer-events: none;
+}

@@ -1,0 +1,48 @@
+
+a {
+    color: green;
+}
+
+a:visited {
+    color: yellow;
+}
+
+a:hover {
+    color: red;
+}
+
+th:first-child {
+    width: 300px;
+}
+
+th:last-child {
+    width: 100px;
+}
+
+th:nth-child(2) {
+    width: 200px;
+}
+
+td:first-child {
+    color: red;
+}
+
+table > tbody > tr:nth-child(2n) {
+    background-color: lightblue;
+}
+
+li:first-of-type {
+    color: blue;
+}
+
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: "x";
+    width: 20px;
+    height: 20px;
+    border: solid 1px #000;
+    margin-right: 20px;
+}

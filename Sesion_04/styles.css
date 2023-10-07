@@ -1,0 +1,24 @@
+ul {
+    width: 200px;
+    margin: 0;
+    /* list-style: none; */
+}
+
+ul.menu > li {
+    list-style: none;
+}
+
+ul > span {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: gray;
+}
+
+ul > span + li {
+    margin-top: 10px;
+}
+
+ul > span ~ li {
+    color: blue;
+}

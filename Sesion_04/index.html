@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: red;
+            color: white;
+        }
+
+        button[disabled] {
+            background-color: gray;
+        }
+
+        a {
+            color: blue;
+        }
+
+        a[target="_blank"] {
+            color: blueviolet;
+        }
+
+        a[target="_new"] {
+            color: chartreuse;
+        }
+
+        p{
+            color: brown;
+        }
+
+        p[class$="pri"] {
+            color: white;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="" target="_blank">This is _blank</a><br>
+    <a href="" target="_blank">This is _blank</a><br>
+    <a href="" target="_new">This is _new</a><br>
+    <a href="">This does not have target</a><br>
+    
+    <button>Click me!</button>
+    <button disabled>Can't click me</button>
+
+    <div>
+        <p class="primero">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate laborum fuga perspiciatis, dolorum vitae quo, fugiat beatae, perferendis cum deserunt qui veniam ipsum atque sed molestiae mollitia adipisci minus.</p>
+        <p class="principal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate laborum fuga perspiciatis, dolorum vitae quo, fugiat beatae, perferendis cum deserunt qui veniam ipsum atque sed molestiae mollitia adipisci minus.</p>
+        <p class="primario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate laborum fuga perspiciatis, dolorum vitae quo, fugiat beatae, perferendis cum deserunt qui veniam ipsum atque sed molestiae mollitia adipisci minus.</p>
+        <p class="capri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate laborum fuga perspiciatis, dolorum vitae quo, fugiat beatae, perferendis cum deserunt qui veniam ipsum atque sed molestiae mollitia adipisci minus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate laborum fuga perspiciatis, dolorum vitae quo, fugiat beatae, perferendis cum deserunt qui veniam ipsum atque sed molestiae mollitia adipisci minus.</p>
+    </div>
+
+    <div>
+        <table border="">
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+            </tr>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+            </tr>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+            </tr>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

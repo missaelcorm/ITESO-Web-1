@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+    <head>
+        <h1 class="title">To Do List</h1>
+    </head>
+    <div class="addTask">
+        <h3>Add Task</h3>
+        <form action="" id="addTaskForm">
+            <input type="text" name="" id="addTaskIn">
+            <button id="addTaskBtn">Add Task</button>
+        </form>
+    </div>
+    <div class="tasks" id="container">
+        <span class="emptyList">Empty List</span>
+    </div>
+
+    <script id="template" type="text/x-handlebars-template">
+        <h3>To Do:</h3>
+        {{#each tasks}}
+            <div class="taskDiv">
+                <input type="checkbox" name="" id="">
+                <label class="taskContent">{{content}}</label>
+                <button class="remove-task-button">Remove</button>
+            </div>
+        {{/each}}
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>

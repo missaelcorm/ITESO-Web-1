@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #468189;
+    color: whitesmoke;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #031926;
+}
+
+header > h1 {
+    margin: 0;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+}
+
+.picture {
+    width: 100px;
+    height: 100px;
+    border: solid 5px #031926;
+    background-color: #fff;
+    margin-left: 20px;
+    top: -20px;
+    position: relative;
+}
+
+.picture > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+
+section > .picture {
+    border-radius: 10px;
+}
+
+.description {
+    margin-left: 40px;
+    width: 95%;
+    top: -80px;
+    position: relative;
+    float: left;
+}
+
+.footer > .links > a {
+    background-color: #F0F7EE;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.contact > .links > a {
+    background-color: #F0F7EE;
+    color: black;
+    padding: 14px 25px;
+    text-decoration: none;
+    margin: 10px;
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+}
+
+.name {
+    margin-left: 140px;
+    margin-right: 60px;
+    top: -100px;
+    position: relative;
+    color: #fff;
+    background-color: #031926;
+    line-height: 60px;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.jobs {
+    float: right;
+    width: 20%;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: #031926;
+    padding: 10px;
+}
+
+.post {
+    float: left;
+    width: 75%;
+    border-radius: 10px;
+    background-color: #031926;
+    padding: 10px;
+}
+
+footer, footer > .links {
+    width: 100%;
+    height: 100px;
+    background-color: #031926;
+    position: fixed;
+    bottom: 0;
+}
+
+.contact > .links {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.gallery {
+    width: 75%;
+    margin-left: 40px;
+    position: relative;
+}
+
+.gallery#index_gallery {
+    top: -190px;
+}
+
+.gallery#pets_gallery {
+    width: 90%;
+}
+
+.gallery > .photo {
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    position: relative;
+    float: left;
+    border: solid 5px #000;
+    margin: 20px;
+}
+
+.photo > img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    text-align: center;
+}
+ 
+table {
+    color: #000;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right    : auto;
+}
+ 
+tbody tr:nth-child(odd) {
+    background: #eee;
+}
+caption {
+    font-size: 0.8rem;
+}
+
+div.pets {
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Engine</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+    <section id="container">
+        Loading...
+    </section>
+
+    <script id="template" type="text/x-handlebars-template">
+        <h1 id="header">{{title}}</h1>
+        <table border="">
+            <tr>
+                {{#each cols}}
+                <th>{{this}}</th>
+                {{/each}}
+            </tr>
+
+            {{#each users}}
+            <tr>
+                {{#each this}}
+                {{#if (isString this)}}
+                <td>{{this}}</td>
+                {{/if}}
+                {{/each}}
+            </tr>
+            {{/each}}
+        </table>
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
