@@ -37,6 +37,7 @@ $(document).ready(() => {
     function checkForWin() {
         if (flippedCards.length === maxValue + 1) {
             alert("Congratulations, You Won! :D");
+            restartGame();
         }
     }
 
@@ -52,31 +53,31 @@ $(document).ready(() => {
                 matrix.rows[i].cols[j] = uniqueIntegers[currentIndex++];
             }
         }
-
+        
     }
 
-    const gridTemplate = $("#template").first();
-    const gridContainer = $(".container").first();
-    const template = Handlebars.compile(gridTemplate.html());
+    function restartGame() {
+        // Reinitialize or reset any game-related variables
+        currentCards.splice(0, currentCards.length);
+        flippedCards.splice(0, flippedCards.length);
+        isChecking = false;
     
-    shuffleArray(uniqueIntegers);
+        // Shuffle the cards again
+        shuffleArray(uniqueIntegers);
+    
+        // Fill the matrix with new card values
+        fillArrayRandomly(matrix, ROWS, COLS, uniqueIntegers);
+    
+        // Update the grid with the new cards
+        const gridResult = template(matrix);
+        gridContainer.html(gridResult);
+    
+        // Add event listeners to the new cards
+        const newCards = $(".card");
+        newCards.on("click", handleCardClick);
+    }
 
-    const matrix = {
-        rows: new Array(ROWS),
-        title: "Memorama"
-    };
-
-    fillArrayRandomly(matrix, ROWS, COLS, uniqueIntegers);
-
-    const gridResult = template(matrix);
-    gridContainer.html(gridResult);
-    const cards = $(".card");
-
-    const currentCards = [];
-    const flippedCards = [];
-    let isFlipping = false;
-
-    cards.on("click", (event) => {
+    const handleCardClick = (event) => {
         const card = event.currentTarget;
 
         // Ignore clicks on already flipped cards or during a flip
@@ -110,6 +111,29 @@ $(document).ready(() => {
                 checkForWin();
             }, FLIP_TIME);
         }
-    });
+    };
+
+    const gridTemplate = $("#template").first();
+    const gridContainer = $(".container").first();
+    const template = Handlebars.compile(gridTemplate.html());
+    
+    shuffleArray(uniqueIntegers);
+
+    const matrix = {
+        rows: new Array(ROWS),
+        title: "Memorama"
+    };
+
+    fillArrayRandomly(matrix, ROWS, COLS, uniqueIntegers);
+
+    const gridResult = template(matrix);
+    gridContainer.html(gridResult);
+    const cards = $(".card");
+
+    const currentCards = [];
+    const flippedCards = [];
+    let isFlipping = false;
+
+    cards.on("click", handleCardClick);
 
 });
