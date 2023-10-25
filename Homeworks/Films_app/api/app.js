@@ -16,10 +16,11 @@ const {
 
 const MONGO_URI = `${MONGO_PROTOCOL}://${MONGO_USER}:${MONGO_PASS}@${MONGO_HOST}/${MONGO_DB}?retryWrites=true&w=majority`;
 
+app.use(express.json());
 app.use('', routes);
 
 app.get('', (req, res) => {
-    res.send("Request received lol");
+    res.send("Request received");
 });
 
 mongoose.connect(MONGO_URI).then((client) => {
@@ -28,4 +29,4 @@ mongoose.connect(MONGO_URI).then((client) => {
     });
 }).catch((err) => {
     console.log(err);
-});    
+});

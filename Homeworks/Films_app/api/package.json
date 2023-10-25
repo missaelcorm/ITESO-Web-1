@@ -1,14 +1,14 @@
 {
-  "name": "sesion_17",
+  "name": "films_api",
   "version": "1.0.0",
-  "description": "test api",
+  "description": "API of Films",
   "main": "app.js",
   "scripts": {
-    "start": "node .",
-    "dev": "nodemon .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
-  "author": "",
+  "author": "Missael Cortes",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
