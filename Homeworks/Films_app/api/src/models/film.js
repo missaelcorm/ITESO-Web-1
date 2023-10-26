@@ -10,7 +10,7 @@ const filmSchema = new Schema({
     synopsis: { type: String, required: true },
     duration: { type: Number, required: true },
     genre: { type: String, required: true },
-    actors: [actorSchema], default: []
+    actors: [actorSchema]
 });
 
 module.exports = model('films', filmSchema);

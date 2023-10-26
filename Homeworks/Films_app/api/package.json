@@ -4,13 +4,14 @@
   "description": "API of Films",
   "main": "app.js",
   "scripts": {
-    "run": "node .",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
   "author": "Missael Cortes",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.6.3"
