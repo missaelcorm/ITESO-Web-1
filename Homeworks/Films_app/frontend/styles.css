@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p#empty-list-message{
+    text-align: center;
+}
+
+p.hidden {
+    display: none;
+}
